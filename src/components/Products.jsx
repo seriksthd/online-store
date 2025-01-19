@@ -90,7 +90,7 @@ export default function Products() {
     <div>
       <StyledSection>
         <section>
-          <article>
+          <article className="article">
             {state.products.map((item) => (
               <div key={item.id} className="box">
                 <img src={item.image} alt={item.title} />
@@ -127,6 +127,11 @@ const StyledSection = styled.section`
   article {
     display: flex;
     gap: 60px;
+  }
+  .article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .box {
     display: flex;
