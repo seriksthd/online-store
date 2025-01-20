@@ -95,7 +95,7 @@ export default function Products() {
               <div key={item.id} className="box">
                 <img src={item.image} alt={item.title} />
                 <h3>{item.title}</h3>
-                <b>{item.price}</b>
+                <b>$ {item.price}</b>
                 <button
                   onClick={() => addproduct(item.id)}
                   disabled={disabledAddButton(item.id)}
