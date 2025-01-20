@@ -33,15 +33,14 @@ export const products = [
   },
   {
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN0Wfpzw8BkVS0tkIF8mVR-MatKmkaFlREGA&s",
+      "https://avatars.mds.yandex.net/i?id=370389fb8b66d572db232863d93cd14afcd11bbc-7629177-images-thumbs&n=13",
     title: "mango",
     price: 15,
     id: 5,
     amount: 0,
   },
   {
-    image:
-      "https://multiurok.ru/img/923179/image_5eb763d8e467f.jpg",
+    image: "https://multiurok.ru/img/923179/image_5eb763d8e467f.jpg",
     title: "жузум",
     price: 8,
     id: 6,

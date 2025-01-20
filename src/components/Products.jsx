@@ -2,7 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import styled from "styled-components";
 import { products } from "../utils/constants";
 import { ProductsList } from "./ProductsList";
-// import { ProductsList } from "./ProductsList";
+
 const initialState = {
   products,
   product: JSON.parse(localStorage.getItem("product")) || [],
@@ -78,11 +78,11 @@ export default function Products() {
     dispatch({ type: "decrement", payload: id });
   };
   const disabledDecrementButton = (id) => {
-    return state.product.find((item) => item.id === id && item.amount === 0);
+    return state.product.find((item) => item.id === id && item.amount === 1);
   };
 
   const totalPrice = state.product.reduce(
-    (total, item) => total + item.amount * item.amount,
+    (total, item) => total + item.price * item.amount,
     0
   );
 
@@ -128,7 +128,7 @@ const StyledSection = styled.section`
     display: flex;
     gap: 60px;
   }
-  .article{
+  .article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -153,6 +153,7 @@ const StyledSection = styled.section`
       color: white;
       border: none;
       border-radius: 10px;
+      cursor: pointer;
       &:disabled {
         background-color: gray;
         cursor: not-allowed;

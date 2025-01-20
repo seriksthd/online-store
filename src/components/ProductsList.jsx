@@ -32,19 +32,13 @@ export const ProductsList = ({
               <td>{item.price}$</td>
               <td style={{ width: "298px" }}>
                 <QuantityControl>
-                  <button
-                    // disabled={item.amount === item.stock}
-                    className="incBtn"
-                    onClick={() => increment(item.id)}
-                  >
+                  <button className="incBtn" onClick={() => increment(item.id)}>
                     +
                   </button>
-
                   <button
-                    // disabled={item.amount === item.stock}
                     className="decBtn"
                     onClick={() => decrement(item.id)}
-                    disabled={() => disabledDecrementButton(item.id)}
+                    disabled={disabledDecrementButton(item.id)}
                   >
                     -
                   </button>
